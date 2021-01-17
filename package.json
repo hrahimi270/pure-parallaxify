@@ -1,6 +1,6 @@
 {
   "name": "pure-parallaxify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A pure parallax plugin without dependencies, with a performance boost.",
   "main": "src/index.js",
   "author": {
