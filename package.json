@@ -1,0 +1,32 @@
+{
+  "name": "pure-parallaxify",
+  "version": "0.0.1",
+  "description": "A pure parallax plugin without dependencies, with a performance boost.",
+  "main": "src/index.js",
+  "author": {
+    "url": "https://github.com/hrahimi270",
+    "name": "Hossein Rahimi",
+    "email": "hrahimi270@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/hrahimi270/pure-parallaxify"
+  },
+  "dependencies": {
+    "husky": "^4.3.8",
+    "parcel-bundler": "^1.12.4",
+    "shx": "^0.3.3"
+  },
+  "scripts": {
+    "dev": "parcel watch src/index.js --out-file pure.parallaxify.js",
+    "prebuild": "npm run clean",
+    "build": "parcel build src/index.js --out-file pure.parallaxify.js --out-dir ./dist --public-url . --detailed-report --no-source-maps",
+    "clean": "shx rm -rf dist",
+    "test": "echo \"No test specified\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
+  }
+}
