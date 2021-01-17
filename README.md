@@ -16,7 +16,7 @@ yarn add pure-parallaxify
 Or you can use the CDN in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pure-parallaxify@0.0.1/dist/pure.parallaxify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pure-parallaxify@0.0.3/dist/pure.parallaxify.js"></script>
 ```
 
 ## Get things going
