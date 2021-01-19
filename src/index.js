@@ -39,7 +39,7 @@ const requestAnimationFrame =
     setTimeout(callback, SECOND / maxFPS);
   };
 
-class Parallaxify {
+export default class Parallaxify {
   constructor(options, containerElementQuery) {
     bindMethods.call(this);
 
@@ -235,6 +235,7 @@ class Parallaxify {
   _detectMobile() {
     // see http://detectmobilebrowser.com/mobile
     var browser = navigator.userAgent || navigator.vendor || window.opera;
+    /* eslint-disable no-useless-escape */
     this.isMobile =
       /(bb\d+|meego).+mobile|android|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|playbook|plucker|pocket|psp|series(4|6)0|silk|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
         browser
@@ -675,7 +676,7 @@ class Parallaxify {
     });
   }
 
-  _handleSensorWebkit() {
+  _handleSensorWebkit(e) {
     // gamma is device roll (moving left right)
     // values are from -180 to 180
     this.gamma = e.gamma;
@@ -687,7 +688,7 @@ class Parallaxify {
     this.requestTick();
   }
 
-  _handleSensorMoz() {
+  _handleSensorMoz(e) {
     // x is device roll (moving left right)
     // values are from -1 to 1
     this.gamma = e.x * 180;
