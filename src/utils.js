@@ -128,7 +128,7 @@ export const getBackgroundPosition = (el) => {
 
 // bind methods of a class to the 'this' keyword
 export function bindMethods() {
-  Object.getOwnPropertyNames(Object.getPrototypeOf(this)).map((key) => {
+  Object.getOwnPropertyNames(Object.getPrototypeOf(this)).forEach((key) => {
     if (this[key] instanceof Function && key !== "constructor")
       this[key] = this[key].bind(this);
   });
