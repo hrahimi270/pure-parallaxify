@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "A pure parallax plugin without dependencies, with a performance boost.",
   "main": "src/index.js",
+  "files": ["src"],
   "author": {
     "url": "https://github.com/hrahimi270",
     "name": "Hossein Rahimi",
